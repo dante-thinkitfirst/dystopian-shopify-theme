@@ -314,7 +314,7 @@
       "1592061502203": {
         "type": "products_group",
         "settings": {
-          "collection": "summer-sale",
+          "collection": "trending",
           "max_products": "4",
           "product_info_bg_color": "#000000"
         }
