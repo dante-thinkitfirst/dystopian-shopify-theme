@@ -69,30 +69,33 @@
               "bottom_image_destination": ""
             }
           },
-          "1592237046508": {
-            "type": "image",
-            "settings": {
-              "bottom_image_destination": ""
-            }
-          },
           "1592237063040": {
             "type": "image",
             "settings": {
+              "bottom_image": "shopify:\/\/shop_images\/Summer-Streetwear-for-Woman.jpg",
               "bottom_image_destination": ""
             }
           },
           "1592237099144": {
             "type": "image",
             "settings": {
+              "bottom_image": "shopify:\/\/shop_images\/sneakers-streetwear-clothing-fashion-d2line-1-1024x683.png",
+              "bottom_image_destination": ""
+            }
+          },
+          "1592237046508": {
+            "type": "image",
+            "settings": {
+              "bottom_image": "shopify:\/\/shop_images\/nm8842B_DSC_8438_1024x1024_69c699c1-7cd3-4dde-b2b8-856f8785db6f.webp",
               "bottom_image_destination": ""
             }
           }
         },
         "block_order": [
           "1592236945549",
-          "1592237046508",
           "1592237063040",
-          "1592237099144"
+          "1592237099144",
+          "1592237046508"
         ],
         "settings": {
           "bg_type": "video",
