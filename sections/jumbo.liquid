@@ -1,10 +1,9 @@
 <section class="jumbo-section">
   {% if section.settings.bg_type == 'video' %}
   {% if section.settings.video_type == 'vimeo' %}
-    <div style="padding:52.73% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/980991410?h=a3bf1f4ce0&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    <!-- <iframe allowfullscreen="" class="bg-video" frameborder="0" mozallowfullscreen=""
+    <iframe allowfullscreen="" class="bg-video" frameborder="0" mozallowfullscreen=""
       style="background: black;" webkitallowfullscreen=""
-      src="//player.vimeo.com/video/{{section.settings.video_id}}?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&loop=1&mute1" allow= autoplay;></iframe> -->
+      src="//player.vimeo.com/video/{{section.settings.video_id}}?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&loop=1&mute1" allow= autoplay;></iframe>
       {% else %}
     <iframe class="bg-video" style="background: black;" src="https://www.youtube.com/embed/{{section.settings.video_id}}?rel=0&autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loop="true"></iframe>
       {% endif %}
