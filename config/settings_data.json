@@ -65,6 +65,7 @@
           "1592236945549": {
             "type": "image",
             "settings": {
+              "bottom_image": "shopify:\/\/shop_images\/img1.webp",
               "bottom_image_destination": ""
             }
           },
