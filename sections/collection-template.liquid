@@ -17,7 +17,7 @@
 
 {% paginate collection.products by limit %}
 
-<div data-section-id="{{ section.id }}" data-section-type="collection-template">
+<div data-section-id="{{ section.id }}"   data-section-type="collection-template">
   <div class="collection-header">
     {%- assign is_filter_by_available = false -%}
     {%- if section.settings.tags_enable and collection.all_tags.size > 0 -%}
@@ -36,10 +36,8 @@
         </noscript>
         <div class="collection-hero__title-wrapper">
           <h1 class="collection-hero__title page-width">
-            <span role="text">
               <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
               {{ collection.title }}
-            </span>
           </h1>
         </div>
       </div>
@@ -57,10 +55,8 @@
       <div class="page-width">
         <div class="section-header text-center">
           <h1>
-            <span role="text">
               <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
               {{ collection.title }}
-            </span>
           </h1>
           {% if collection.description != blank %}
             <div class="rte">
@@ -124,8 +120,8 @@
         </div>
       </div>
     {% endif %}
-  </div>
-
+  </header>
+  <div class="content-wrapper-bottom">
   <div class="page-width" id="Collection">
     {% if section.settings.layout == 'grid' %}
       {% case section.settings.grid %}
@@ -235,7 +231,7 @@
 
 {% endpaginate %}
 
-
+</div>
 
 {% schema %}
 {

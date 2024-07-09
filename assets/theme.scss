@@ -12,7 +12,7 @@
   Convert pixels to ems
   eg. for a relational value of 12px write em(12) when the parent is 16px
   if the parent is another value say 24px write em(12, 24)
-  Based on https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_px-to-em.scsss
+  Based on https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_px-to-em.scss
 ==============================================================================*/
 @function em($pxval, $base: $font-size-base) {
   @if not unitless($pxval) {
@@ -490,7 +490,7 @@ $z-index-predictive-search-wrapper: 1000;
 $z-index-skip-to-content: 10000; // really high to be safe of app markup
 
 /*================ SVG ================*/
-$svg-select-icon: #{'//cdn.shopify.com/s/files/1/0299/6935/0740/t/9/assets/ico-select.svg?493'};
+$svg-select-icon: #{'//cdn.shopify.com/s/files/1/0406/4339/5748/t/2/assets/ico-select.svg?v=29003672709104678581591456762'};
 
 /*================ Drawers ================*/
 $transition-drawer: all $transition-duration-slow cubic-bezier(0.29, 0.63, 0.44, 1);
@@ -618,7 +618,7 @@ $slick-opacity-not-active: 0.25;
 
 // Only called once so make sure proper file is grabbed
 @function slick-image-url($url) {
-  @return url(//cdn.shopify.com/s/files/1/0299/6935/0740/t/9/assets/ajax-loader.gif?v=4135686330247201572);
+  @return url(//cdn.shopify.com/s/files/1/0406/4339/5748/t/2/assets/ajax-loader.gif?v=41356863302472015721591456746);
 }
 
 // Unused intentionally
@@ -5029,6 +5029,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   z-index: $z-index-announcement-bar;
   position: relative;
   text-align: center;
+  border-bottom: 1px solid transparent;
 }
 
 .announcement-bar--link {
@@ -5440,6 +5441,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   font-size: em($font-size-base + 2px);
   font-family: $font-stack-header;
   font-weight: $font-weight-header;
+  margin-bottom: 0;
 }
 
 .product-details {

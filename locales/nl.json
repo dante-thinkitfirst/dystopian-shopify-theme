@@ -294,7 +294,7 @@
       "cancelled_reason": "Reden: {{ reason }}",
       "billing_address": "Factuuradres",
       "payment_status": "Betaalstatus",
-      "shipping_address": "Verzendadres",
+      "shipping_address": "Bezorgadres",
       "fulfillment_status": "Fulfillmentstatus",
       "discount": "Korting",
       "shipping": "Verzending",

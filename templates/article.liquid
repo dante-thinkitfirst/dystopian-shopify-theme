@@ -1,4 +1,6 @@
 <div class="content-wrapper">
+
+
 {%- comment -%}
   Comments may not appear right after they are submitted, either to be checked by Shopify's spam filter
   or to await moderation. When a comment is submitted, the browser is redirected to a page
@@ -12,7 +14,7 @@
   {%- assign number_of_comments = article.comments_count -%}
 {%- endif -%}
 
-<article class="page-width">
+<article class="page-width" aria-labelledby="title-0">
   <div class="grid">
     <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
       {% section 'article-template' %}
@@ -141,6 +143,7 @@
   </a>
 </div>
 </div>
+
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",

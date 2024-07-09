@@ -1,4 +1,5 @@
 <div class="content-wrapper">
+
 {% paginate search.results by 10 %}
 
 <div class="page-width">
@@ -104,7 +105,7 @@
   {%- endif -%}
 {% endif %}
 
-{% if search.results_count <div 2  %}
+{% if search.results_count < 2  %}
   <div class="search--less-than-2-results"></div>
 {% endif %}
 

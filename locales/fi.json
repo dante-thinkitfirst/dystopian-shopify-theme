@@ -283,7 +283,7 @@
       "order_number_link": "Tilausnumero {{ number }}",
       "date": "Päivämäärä",
       "payment_status": "Maksun tila",
-      "fulfillment_status": "Käsittelyn tila",
+      "fulfillment_status": "Jakelun tila",
       "total": "Yhteensä",
       "none": "Et ole vielä tehnyt tilauksia."
     },
@@ -295,7 +295,7 @@
       "billing_address": "Laskutusosoite",
       "payment_status": "Maksun tila",
       "shipping_address": "Toimitusosoite",
-      "fulfillment_status": "Käsittelyn tila",
+      "fulfillment_status": "Jakelun tila",
       "discount": "Alennus",
       "shipping": "Toimitus",
       "tax": "Vero",

@@ -1,18 +1,15 @@
 <section class="jumbo-section">
   {% if section.settings.bg_type == 'video' %}
-    {% if section.settings.video_type == 'vimeo' %}
-      <iframe allowfullscreen="" class="bg-video" frameborder="0" mozallowfullscreen="" style="background: black;"
-      webkitallowfullscreen=""
-      src="//player.vimeo.com/video/{{section.settings.video_id}}?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&loop=1&mute=1"></iframe>
-      {{section.settings.video_id}}
-    {% else %}
-      <iframe class="bg-video" style="background: black;" src="https://www.youtube.com/embed/{{section.settings.video_id}}?autoplay=1&loop=1&mute=1" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    {% endif %}
+  {% if section.settings.video_type == 'vimeo' %}
+    <iframe allowfullscreen="" class="bg-video" frameborder="0" mozallowfullscreen=""
+      style="background: black;" webkitallowfullscreen=""
+      src="//player.vimeo.com/video/{{section.settings.video_id}}?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&loop=1&mute1" allow= autoplay;></iframe>
+      {% else %}
+    <iframe class="bg-video" style="background: black;" src="https://www.youtube.com/embed/{{section.settings.video_id}}?rel=0&autoplay=1&mute=1" frameborder="0" allow= "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
   {% else %}
-    <div class="bg-image" style="background: url('{{ section.settings.bg_image | img_url: '1200x'}}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="bg-image" style="background: url('{{ section.settings.bg_image | img_url: '1200x' }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
   {% endif %}
-
   <div class="transparent-color"></div>
   <div class="titles">
     <h1>{{section.settings.jumbo_h1}}</h1>
@@ -23,100 +20,91 @@
   </div>
   <div class="store-info">
     {% for block in section.blocks %}
-      {%- if block.settings.bottom_image != blank -%}
-      <a href="{{ block.settings.bottom_image_destination}}">
-        <img src="{{ block.settings.bottom_image | img_url: '300x'}}">
-      </a>
-      {% else %}
-      <a href="#">
-        <img src="{{ 'summer-girl.jpg' | asset_url }}">
-      </a>
-      {% endif %}
+    {%- if block.settings.bottom_image != blank-%}
+    <a href="{{ block.settings.bottom_image_destination}}">
+    <img src="{{ block.settings.bottom_image | img_url: '300x' }}"></a>
+    {% else %}
+    <a href="#">
+    <img src="{{ 'summer-girl.jpg' | asset_url}}"></a>
+    {% endif %}
     {% endfor %}
   </div>
 </section>
 
-
 {% schema %}
 {
-  "name": "jumbo",
+  "name": "Jumbo",
   "settings": [
     {
       "type": "radio",
       "id": "bg_type",
       "label": "Background Type",
       "options": [
-        {
-          "value": "image",
-          "label": "Image"
-        },
-        {
-          "value": "video",
-          "label": "Video"
-        }
+        { "value": "image", 
+          "label": "Image" },
+
+        { "value": "video", 
+          "label": "Video" }
       ],
       "default": "video",
-      "info": "Do You Want A Video Or Image For The Background"
-    },
-    {
-      "type": "image_picker",
-      "id": "bg_image",
-      "label": {
-        "da": "Billede",
-        "de": "Foto",
-        "en": "Image",
-        "es": "Imagen",
-        "fi": "Kuva",
-        "fr": "Image",
-        "hi": "इमेज",
-        "it": "Immagine",
-        "ja": "画像",
-        "ko": "이미지",
-        "nb": "Bilde",
-        "nl": "Afbeelding",
-        "pt-BR": "Imagem",
-        "pt-PT": "Imagem",
-        "sv": "Bild",
-        "th": "รูปภาพ",
-        "zh-CN": "图片",
-        "zh-TW": "圖片"
-      }
-    },
+      "info":  "Do You Want A Video BG or Image For The Background"
+   },
+   {
+    "type": "image_picker",
+    "id": "bg_image",
+    "label": {
+      "da": "Billede",
+      "de": "Foto",
+      "en": "Image",
+      "es": "Imagen",
+      "fi": "Kuva",
+      "fr": "Image",
+      "hi": "इमेज",
+      "it": "Immagine",
+      "ja": "画像",
+      "ko": "이미지",
+      "nb": "Bilde",
+      "nl": "Afbeelding",
+      "pt-BR": "Imagem",
+      "pt-PT": "Imagem",
+      "sv": "Bild",
+      "th": "รูปภาพ",
+      "zh-CN": "图片",
+      "zh-TW": "圖片"
+    }
+  },
     {
       "type": "radio",
       "id": "video_type",
       "label": "Video Type",
       "options": [
-        {
-          "value": "youtube",
-          "label": "Youtube"
-        },
-        {
-          "value": "vimeo",
-          "label": "Vimeo"
-        }
+        { "value": "youtube", 
+          "label": "Youtube" },
+
+        { "value": "vimeo", 
+          "label": "Vimeo" }
       ],
       "default": "vimeo",
-      "info": "Choose location where you uploaded video"
-    },
-    {
-      "type": "text",
-      "id": "video_id",
-      "label": "Video id",
-      "default": "353546049"
-    },
-    {
-      "type": "text",
-      "id": "jumbo_h1",
-      "label": "Jumbo Title",
-      "default": "OFF WHITE"
-    },
-    {
+      "info":  "Choose location where you uploaded video"
+   },
+   {
+    "type": "text",
+    "id": "video_id",
+    "label": "Video Id", 
+    "default": "353546049"
+  },
+  {
+    "type": "text",
+    "id": "jumbo_h1",
+    "label": "Jumbo Title",
+    "default": "Streetwear"
+  },
+  {
       "type": "text",
       "id": "jumbo_h2",
       "label": "Jumbo Sub-Title",
-      "default": "New Collection"
-    },
+      "default": "Collection"
+  },  
     {
       "type": "richtext",
       "id": "subheading",
@@ -214,52 +202,53 @@
     {
       "type": "image",
       "name": "Bottom Images",
-      "limit": 4,
+      "limit": 4, 
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "bottom_image",
-          "label": "Image"
-        },
-        {
-        "id": "bottom_image_destination",
-        "type": "url",
-        "label": "Image URL"
-        }
-      ]
+      {
+    "type": "image_picker",
+    "id": "bottom_image",
+    "label": "Image"
+      }, 
+    {
+      "id": "bottom_image_destination",
+      "type": "url",
+      "label": "Image URL"
+      } 
+    ]
     }
+  
   ],
   "presets": [
     {
       "name": "Jumbo",
-      "category": "Image",
+      "category": "Image", 
       "blocks": [
         {
-          "type": "image",
+          "type": "image", 
           "settings": {
-          "bottom_image_destination": "#"
+            "bottom_image_destination": "#"
+          }
+        }, 
+        {
+          "type": "image", 
+          "settings": {
+            "bottom_image_destination": "#"
           }
         },
         {
-          "type": "image",
+          "type": "image", 
           "settings": {
-          "bottom_image_destination": "#"
+            "bottom_image_destination": "#"
           }
         },
         {
-          "type": "image",
+          "type": "image", 
           "settings": {
-          "bottom_image_destination": "#"
-          }
-        },
-        {
-          "type": "image",
-          "settings": {
-          "bottom_image_destination": "#"
+            "bottom_image_destination": "#"
           }
         }
-      ]
       
+      ]
     }
   ]
 }
