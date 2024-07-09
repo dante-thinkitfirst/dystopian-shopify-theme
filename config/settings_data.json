@@ -121,7 +121,6 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/tinywow_profile_photo_59868618_4.png",
           "logo_max_width": 50,
           "main_linklist": "main-menu",
           "message": false,
