@@ -306,7 +306,7 @@
       "1592058489748": {
         "type": "horizontal_sale",
         "settings": {
-          "collection": "",
+          "collection": "sale",
           "percent": "50",
           "collection_bg_color": "#000000"
         }
