@@ -100,7 +100,7 @@
           "jumbo_h1": "Streetwear",
           "jumbo_h2": "Collection",
           "subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
-          "show_background": true
+          "show_background": false
         }
       },
       "two_collections": {
