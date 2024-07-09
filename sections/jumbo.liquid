@@ -5,7 +5,7 @@
       style="background: black;" webkitallowfullscreen=""
       src="//player.vimeo.com/video/{{section.settings.video_id}}?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&loop=1&mute1" allow= autoplay;></iframe>
       {% else %}
-    <iframe class="bg-video" style="background: black;" src="https://www.youtube.com/embed/{{section.settings.video_id}}?rel=0&autoplay=1&mute=1&loop=1" frameborder="0" allow= "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="bg-video" style="background: black;" src="https://www.youtube.com/embed/{{section.settings.video_id}}?rel=0&autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loop="true"></iframe>
       {% endif %}
   {% else %}
     <div class="bg-image" style="background: url('{{ section.settings.bg_image | img_url: '1200x' }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
